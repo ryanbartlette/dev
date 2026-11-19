@@ -32,3 +32,15 @@
     });
   });
 })();
+
+/* archive: reveal more episodes */
+(function(){
+  var btn=document.getElementById('archivemore'), grid=document.getElementById('archivegrid');
+  if(!btn||!grid) return;
+  function update(){ if(!grid.querySelector('.more-hide')) btn.parentNode.hidden=true; }
+  btn.addEventListener('click',function(){
+    var hidden=grid.querySelectorAll('.more-hide'), n=Math.min(24,hidden.length);
+    for(var i=0;i<n;i++) hidden[i].classList.remove('more-hide');
+    update();
+  });
+})();

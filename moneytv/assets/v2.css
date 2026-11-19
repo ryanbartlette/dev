@@ -228,3 +228,5 @@ textarea.input{min-height:110px;resize:vertical}
 .more-link:hover{text-decoration:underline}
 
 .thumb img ~ .cover{display:none}
+
+.more-hide{display:none!important}
