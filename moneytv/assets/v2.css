@@ -218,3 +218,7 @@ textarea.input{min-height:110px;resize:vertical}
 .profile-top{grid-template-columns:96px 1fr}
 .profile-top .avatar{width:96px;height:96px}
 @media (max-width:760px){.profile-top{grid-template-columns:72px 1fr}.profile-top .avatar{width:72px;height:72px}}
+
+.classic{background:linear-gradient(180deg,var(--panel),transparent);border-left:3px solid var(--accent2)}
+.classic .tag{display:inline-block;margin-bottom:10px}
+.classic h3{font-style:italic}
