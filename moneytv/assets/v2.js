@@ -44,3 +44,10 @@
     update();
   });
 })();
+
+/* in-page jump links (profile pages) */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-jump]'); if(!a) return;
+  var t=document.getElementById(a.getAttribute('data-jump')); if(!t) return;
+  e.preventDefault(); t.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+});
