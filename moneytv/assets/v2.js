@@ -10,6 +10,8 @@
       var show = f === 'all' || it.getAttribute('data-show') === f || it.getAttribute('data-type') === f;
       it.classList.toggle('hidden', !show);
     });
+    var empty=document.getElementById('feedempty');
+    if(empty) empty.classList.toggle('hidden', feed.querySelectorAll('.item:not(.hidden)').length>0);
   });
 })();
 
