@@ -230,3 +230,22 @@ textarea.input{min-height:110px;resize:vertical}
 .thumb img ~ .cover{display:none}
 
 .more-hide{display:none!important}
+
+/* fantasy league leaderboard */
+.lb-list{list-style:none;margin:0;padding:0}
+.lb-row{display:grid;grid-template-columns:26px 30px 1fr auto;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:14px;position:relative}
+.lb-row:first-child{border-top:0}
+.lb-rk{font:600 13px var(--mono);color:var(--dim);text-align:center}
+.lb-row:nth-child(-n+3) .lb-rk{color:var(--accent)}
+.lb-av{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--panel-2);border:1px solid var(--line-2);font-size:15px;font-weight:700;color:var(--accent)}
+.lb-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.lb-val{text-align:right;display:flex;flex-direction:column;line-height:1.2}
+.lb-val b{font:600 14px var(--mono)}
+.lb-val em{font:500 12px var(--mono);font-style:normal}
+.lb-val .up{color:var(--accent)} .lb-val .dn{color:var(--down)}
+.lb-bar{grid-column:2 / -1;height:4px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.lb-bar i{position:absolute;top:0;bottom:0;border-radius:3px}
+.lb-bar i.up{background:var(--accent)} .lb-bar i.dn{background:var(--down)}
+.lb-list.full .lb-row{padding:12px 0 10px;row-gap:7px}
+.lb-foot{font-size:12px;color:var(--dim);margin:10px 0 2px}
+.mod.lb .more-link{display:inline-block;margin-top:6px;font-size:13px}
