@@ -70,3 +70,10 @@ set(secs[0]&&secs[0].id);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)set(e.target.id)})},{rootMargin:'-80px 0px -65% 0px'});
 secs.forEach(function(s){io.observe(s)});
 })();
+
+/* Newsletter button opens a pop-up with the signup form */
+(function(){var d=document.getElementById('nlmodal');if(!d||typeof d.showModal!=='function')return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="/moneytv/#newsletter"],a[href="#newsletter-open"]');if(!a)return;
+e.preventDefault();d.showModal();var i=document.getElementById('nlemail');if(i)setTimeout(function(){i.focus()},30)});
+d.addEventListener('click',function(e){if(e.target===d)d.close()});
+})();

@@ -453,3 +453,14 @@ body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)
 .toc nav a.on span{color:var(--accent)}
 .toc-other{display:grid}
 @media(max-width:1180px){.lg-jump{display:block}.lg{padding:22px 18px 40px}}
+
+/* Newsletter pop-up */
+.nlmodal{margin:auto;border:1px solid var(--line-2);border-radius:20px;background:var(--panel);color:var(--text);padding:26px 24px 22px;width:min(420px,calc(100vw - 32px));box-shadow:0 24px 80px rgba(0,0,0,.45)}
+.nlmodal::backdrop{background:rgba(0,0,0,.55);backdrop-filter:blur(3px)}
+.nlmodal h3{font:700 24px/1.2 var(--serif);margin:0 0 6px}
+.nlmodal h3 span{display:block;font:600 11.5px var(--mono);letter-spacing:.05em;color:var(--accent);margin-top:6px}
+.nlmodal p{color:var(--muted);font-size:14.5px;margin:0 0 14px}
+.nlmodal .field{margin-bottom:10px}
+.nlclose{position:absolute;top:10px;right:12px;margin:0}
+.nlclose button{background:transparent;border:0;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;padding:4px 8px;border-radius:8px}
+.nlclose button:hover{background:var(--panel-2);color:var(--text)}
