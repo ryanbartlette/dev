@@ -334,7 +334,9 @@ textarea.input{min-height:110px;resize:vertical}
 .sp-by img{width:48px;height:48px;border-radius:50%;object-fit:cover}
 .sp-by span{display:flex;flex-direction:column;font-size:13px;color:#4a5068}
 .sp-by b{font-size:16px;color:#0b1030}
-.sp-quote{font:600 clamp(19px,2.1vw,23px)/1.45 var(--c-font);margin:0;color:#0b1030;max-width:34ch}
+.sp-quote{position:relative;font:500 clamp(19px,2.1vw,23px)/1.5 var(--c-font);margin:0;padding:34px 0 0 22px;color:#0b1030;max-width:38ch;border-left:4px solid var(--c-accent-light)}
+.sp-quote:before{content:"\201C";position:absolute;left:18px;top:-6px;font:800 84px/1 Georgia,serif;color:var(--c-accent-light);opacity:.9}
+.sp-quote:after{content:"\201D";color:var(--c-accent-light);font:800 1.4em/0 Georgia,serif;margin-left:3px;vertical-align:-.25em}
 .sp-watch h3{color:#0b1030}
 .sp-watch ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .sp-watch li{position:relative;padding-left:30px;font-size:14.5px;color:#1c2240}
@@ -353,7 +355,7 @@ textarea.input{min-height:110px;resize:vertical}
 .sp-list a:hover b{color:var(--accent)}
 .sp-list b{display:block;font-size:16px;line-height:1.35}.sp-list span{font-size:13px;color:var(--muted)}
 .sp .legal{padding-bottom:36px}
-.sp .legal p{font-size:12.5px;line-height:1.55;color:var(--muted);margin-bottom:10px;max-width:72ch}
+.sp .legal p{font-size:12.5px;line-height:1.55;color:var(--muted);margin-bottom:10px;max-width:none}
 .sp .legal b{color:var(--body)}
 .prose{color:var(--body);max-width:62ch;margin-bottom:12px}
 .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
