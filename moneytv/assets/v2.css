@@ -468,3 +468,11 @@ body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)
 /* the reserved scrollbar strip takes the page background, and the dev bar runs across it */
 html{background:var(--ink)}
 html{overflow-y:scroll}
+
+/* 404 */
+.nf{min-height:calc(100vh - 140px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px}
+.nf-stamp{display:inline-block;font:600 13px var(--mono);letter-spacing:.14em;color:var(--accent);border:2px solid var(--accent);border-radius:6px;padding:7px 12px;transform:rotate(-3deg);margin-bottom:22px}
+.nf h2{font:700 clamp(30px,4.6vw,46px)/1.1 var(--serif);margin:0 0 12px}
+.nf h2 em{font-style:italic;color:var(--accent2)}
+.nf p{color:var(--muted);margin:0 0 22px}
+.nf .cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
