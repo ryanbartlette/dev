@@ -424,3 +424,32 @@ textarea.input{min-height:110px;resize:vertical}
 body:has(.proto-bar) .main{min-height:calc(100vh - 25px)}
 body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)}
 .sect.wwu{padding-bottom:12px}
+
+/* Legal pages */
+.lg{padding:28px 28px 48px;max-width:78ch}
+.lg-head h1{font:700 clamp(28px,3.4vw,38px)/1.12 var(--serif);margin:0 0 8px}
+.lg-meta{color:var(--muted);font-size:13.5px;margin:0 0 22px}
+.lg-intro{color:var(--body);line-height:1.7;margin:0 0 30px;font-size:15.5px}
+.lg-sec{padding:26px 0 8px;border-top:1px solid var(--line);scroll-margin-top:70px}
+.lg-sec h2{font:700 21px/1.25 var(--serif);margin:0 0 10px;display:flex;gap:12px;align-items:baseline}
+.lg-sec h2 span{font:600 12px var(--mono);color:var(--accent);letter-spacing:.04em}
+.lg-sec p,.lg-sec li{color:var(--body);line-height:1.72;font-size:15px}
+.lg-sec p{margin:0 0 12px}.lg-sec ul{padding-left:20px;margin:0 0 12px}
+.lg-sec a,.lg-intro a{color:var(--accent);text-decoration:underline}
+.lg-note{margin-top:30px;padding:14px 16px;border:1px dashed var(--line-2);border-radius:12px;color:var(--muted);font-size:13px}
+.lg-jump{display:none;margin:0 0 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.lg-jump summary{padding:12px 14px;font:600 13px var(--mono);cursor:pointer}
+.lg-jump nav{display:grid;padding:0 6px 8px}
+.lg-jump a{padding:8px 10px;color:var(--body);font-size:14px}
+.lg-jump a span{font:600 11px var(--mono);color:var(--accent);margin-right:10px}
+.toc{gap:14px}
+.toc-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 10px 10px}
+.toc-card>b{display:block;font:600 11.5px var(--mono);letter-spacing:.05em;color:var(--muted);padding:0 10px 8px}
+.toc nav{display:grid;gap:2px}
+.toc nav a,.toc-other a{display:flex;gap:10px;align-items:baseline;padding:8px 10px;border-radius:10px;color:var(--body);font-size:13.5px;line-height:1.3;border-left:3px solid transparent}
+.toc nav a span{font:600 11px var(--mono);color:var(--muted);min-width:18px}
+.toc nav a:hover,.toc-other a:hover{background:var(--panel-2)}
+.toc nav a.on{background:var(--panel-2);border-left-color:var(--accent);color:var(--text);font-weight:600}
+.toc nav a.on span{color:var(--accent)}
+.toc-other{display:grid}
+@media(max-width:1180px){.lg-jump{display:block}.lg{padding:22px 18px 40px}}

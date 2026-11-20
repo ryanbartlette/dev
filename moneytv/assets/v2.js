@@ -60,3 +60,13 @@ btns.forEach(function(b){b.addEventListener('click',function(){pick(b.getAttribu
 var h=(location.hash||'').replace('#','');if(h==='sponsors'||h==='guests')pick(h);
 window.addEventListener('hashchange',function(){var x=(location.hash||'').replace('#','');if(x==='sponsors'||x==='guests')pick(x)});
 })();
+
+/* Legal pages: highlight the section being read in the "On this page" list */
+(function(){var nav=document.getElementById('tocnav');if(!nav||!('IntersectionObserver' in window))return;
+var links={};nav.querySelectorAll('a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+var secs=document.querySelectorAll('.lg-sec');
+function set(id){Object.keys(links).forEach(function(k){links[k].classList.toggle('on',k===id)})}
+set(secs[0]&&secs[0].id);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)set(e.target.id)})},{rootMargin:'-80px 0px -65% 0px'});
+secs.forEach(function(s){io.observe(s)});
+})();
