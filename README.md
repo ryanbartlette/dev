@@ -9,7 +9,6 @@ Each client gets its own folder, so every dev site stays online at once:
 
 | Folder | URL |
 | --- | --- |
-| `moneytv/` | https://dev.ryanbartlette.com/moneytv/ |
 
 ## Adding a client
 
