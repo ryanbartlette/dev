@@ -78,7 +78,11 @@ links.forEach(function(a){a.addEventListener('click',function(e){
   window.scrollTo({top:top,behavior:'smooth'});
   try{history.replaceState(null,'','#'+id)}catch(x){}
 })});
-window.addEventListener('scroll',function(){if(!locked)update()},{passive:true});
+var art=document.querySelector('.lg'),mx=0,my=0,over=false;
+function hover(){var el=document.elementFromPoint(mx,my),s=el&&el.closest&&el.closest('.lg-sec');if(s)set(s.id);else set(current())}
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;over=!!(art&&art.contains(e.target));if(over){locked=null;hover()}},{passive:true});
+if(art)art.addEventListener('mouseleave',function(){over=false});
+window.addEventListener('scroll',function(){if(locked)return;if(over)hover();else update()},{passive:true});
 if(location.hash&&document.getElementById(location.hash.slice(1))){var h=location.hash.slice(1);locked=h;setTimeout(function(){var t=document.getElementById(h);window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-OFFSET});set(h)},50)}
 update();
 })();
