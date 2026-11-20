@@ -418,3 +418,9 @@ textarea.input{min-height:110px;resize:vertical}
 .wwu form.panel .field.full,.wwu form.panel .btn,.wwu form.panel .form-status,.wwu form.panel input[type=hidden]{grid-column:1/-1}
 .wwu form.panel .btn{margin-top:4px}
 @media(max-width:720px){.wwu .paths{grid-template-columns:1fr}.wwu form.panel .field,.wwu form.panel .field.f2{grid-column:1/-1}}
+/* Short pages: no closing divider under the last section, and the page fits the screen without scrolling.
+   The dev-preview bar adds 25px, so it is subtracted while that bar is present. */
+.main>.sect:last-child,.sect.wwu{border-bottom:0}
+body:has(.proto-bar) .main{min-height:calc(100vh - 25px)}
+body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)}
+.sect.wwu{padding-bottom:12px}
