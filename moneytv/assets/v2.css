@@ -464,3 +464,6 @@ body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)
 .nlclose{position:absolute;top:10px;right:12px;margin:0}
 .nlclose button{background:transparent;border:0;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;padding:4px 8px;border-radius:8px}
 .nlclose button:hover{background:var(--panel-2);color:var(--text)}
+
+.lg::after{content:"";display:block;height:80vh}
+.jump-lg{}
