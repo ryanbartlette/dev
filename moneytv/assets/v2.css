@@ -467,3 +467,4 @@ body:has(.proto-bar) .rail,body:has(.proto-bar) .right{height:calc(100vh - 25px)
 
 /* the reserved scrollbar strip takes the page background, and the dev bar runs across it */
 html{background:var(--ink)}
+html{overflow-y:scroll}
