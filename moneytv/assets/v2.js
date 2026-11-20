@@ -92,3 +92,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 e.preventDefault();d.showModal();var i=document.getElementById('nlemail');if(i)setTimeout(function(){i.focus()},30)});
 d.addEventListener('click',function(e){if(e.target===d)d.close()});
 })();
+
+/* Ticker widget: restyle to match the site (its styles live in an open shadow root; page CSS variables inherit in) */
+(function(){
+var CSS='.mtv-card{background:var(--panel);color:var(--text);border-color:var(--line);border-radius:16px}'
++'.mtv-name,.mtv-sector,.mtv-k{color:var(--muted)}.mtv-foot{display:none}'
++'.mtv-cell{background:var(--panel-2);border-color:var(--line)}.mtv-v{color:var(--text)}'
++'.up,.mtv-v.pos{color:var(--accent)}.down,.mtv-v.neg{color:var(--down)}'
++'.mtv-cta{background:var(--signal);color:#0b1409;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:13px 20px}'
++'.mtv-card.w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);column-gap:30px;align-items:start}'
++'.mtv-card.w .mtv-head,.mtv-card.w .mtv-pricerow,.mtv-card.w .mtv-chart,.mtv-card.w .mtv-nochart,.mtv-card.w .mtv-sector{grid-column:1}.mtv-card.w .mtv-head{grid-row:1}.mtv-card.w .mtv-pricerow{grid-row:2}.mtv-card.w .mtv-chart,.mtv-card.w .mtv-nochart{grid-row:3;margin-bottom:0}.mtv-card.w .mtv-sector{grid-row:4;margin:10px 0 0;align-self:center}'
++'.mtv-card.w .mtv-grid{grid-column:2;grid-row:1/4;align-self:stretch;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}.mtv-card.w .mtv-cell{justify-content:center;gap:6px;padding:10px 14px}.mtv-card.w .mtv-v{font-size:19px}.mtv-card.w .mtv-k{font-size:10.5px}.mtv-card.w .mtv-cta{grid-column:2;grid-row:4;margin-top:12px;align-self:end}';
+function apply(t){var r=t.shadowRoot;if(!r||!r.querySelector('.mtv-card')||r.querySelector('style[data-site]'))return false;
+var s=document.createElement('style');s.setAttribute('data-site','1');s.textContent=CSS;r.appendChild(s);var c=r.querySelector('.mtv-card');var f=function(){c.classList.toggle('w',c.getBoundingClientRect().width>=640)};f();if(window.ResizeObserver)new ResizeObserver(f).observe(c);else addEventListener('resize',f);return true}
+function watch(t){if(apply(t))return;var n=0,i=setInterval(function(){if(apply(t)||++n>80)clearInterval(i)},250)}
+function go(){document.querySelectorAll('moneytv-ticker').forEach(watch)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();

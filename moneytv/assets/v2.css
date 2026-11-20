@@ -479,3 +479,7 @@ html{overflow-y:scroll}
 
 .nf .nf-more{margin:26px 0 0;font-size:14px}.nf .nf-more a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
 .nf{min-height:calc(100vh - 80px)}
+
+/* Live ticker spans the full row, At a glance sits below */
+.sp-two:has(moneytv-ticker){grid-template-columns:1fr}
+.sp-two:has(moneytv-ticker) .sp-dl{max-width:none}
