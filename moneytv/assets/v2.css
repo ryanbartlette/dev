@@ -469,3 +469,4 @@ html{scrollbar-gutter:stable}
 /* the reserved scrollbar strip takes the page background, and the dev bar runs across it */
 html{background:var(--ink)}
 .proto-bar{margin-right:calc(100% - 100vw)}
+html{overflow-y:scroll}
