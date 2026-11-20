@@ -51,3 +51,12 @@ document.addEventListener('click',function(e){
   var t=document.getElementById(a.getAttribute('data-jump')); if(!t) return;
   e.preventDefault(); t.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 });
+
+/* Work With Us: choose guest or sponsor form */
+(function(){var root=document.getElementById('wwu');if(!root)return;
+var btns=root.querySelectorAll('.path'),panes=root.querySelectorAll('.pane');
+function pick(t){btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-t')===t?'true':'false')});panes.forEach(function(p){p.hidden=p.getAttribute('data-p')!==t})}
+btns.forEach(function(b){b.addEventListener('click',function(){pick(b.getAttribute('data-t'))})});
+var h=(location.hash||'').replace('#','');if(h==='sponsors'||h==='guests')pick(h);
+window.addEventListener('hashchange',function(){var x=(location.hash||'').replace('#','');if(x==='sponsors'||x==='guests')pick(x)});
+})();
