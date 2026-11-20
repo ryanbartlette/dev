@@ -476,3 +476,6 @@ html{overflow-y:scroll}
 .nf h2 em{font-style:italic;color:var(--accent2)}
 .nf p{color:var(--muted);margin:0 0 22px}
 .nf .cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+.nf .nf-more{margin:26px 0 0;font-size:14px}.nf .nf-more a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
+.nf{min-height:calc(100vh - 80px)}
