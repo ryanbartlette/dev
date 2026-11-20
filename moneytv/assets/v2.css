@@ -383,3 +383,13 @@ textarea.input{min-height:110px;resize:vertical}
 .postpage h1{font:700 clamp(28px,4vw,40px)/1.12 var(--serif);margin:20px 0 14px}
 .postpage p{font-size:17px;line-height:1.7;margin:0 0 16px;color:var(--body)}
 .postpage .head b a{color:inherit}
+
+/* The MoneyTV Take: blockquote with attribution underneath */
+.sp-q{margin:0;position:relative;padding-top:6px}
+.sp-q h3{font:700 13px var(--c-font);letter-spacing:.02em;color:var(--c-accent-light);margin:0 0 14px}
+.sp-q blockquote{margin:0;position:relative;padding:62px 0 24px;border-top:2px solid var(--c-accent-light);font:italic 400 clamp(17px,1.55vw,19.5px)/1.65 var(--serif);color:#0b1030;text-wrap:pretty}
+.sp-q blockquote:before{content:"\201C";position:absolute;left:-2px;top:14px;font:400 84px/1 var(--serif);color:var(--c-accent-light);opacity:.28;pointer-events:none}
+.sp-q figcaption{display:flex;align-items:center;gap:12px;font-size:13.5px;color:#4a5068;border-top:1px solid rgba(11,16,48,.14);padding-top:16px}
+.sp-q figcaption img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.sp-q figcaption span{display:flex;flex-direction:column;line-height:1.35}
+.sp-q figcaption b{font-size:15px;color:#0b1030}
